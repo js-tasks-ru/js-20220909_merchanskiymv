@@ -13,6 +13,5 @@ let sortType = {
 };
 
 export function sortStrings(arr, param = SORTASC) {
-    let tempString = [...arr];
-  return tempString.sort( (string1, string2) =>  sortType[param] * string1.localeCompare(string2, 'ru-en', {caseFirst:'upper'}) );  
+    return [...arr].sort( (string1, string2) =>  sortType[param] * string1.localeCompare(string2, 'ru-en', {caseFirst:'upper'}) );  
 }

@@ -6,20 +6,12 @@
 export function createGetter(path) {
   return function(obj = {}) 
   { let fieldValue = obj;
-    let fieldsName = path.split('.');
-    // console.error(fieldsName);
+    const fieldsName = path.split('.');
     for (let fieldName of fieldsName)
     {
-      if (fieldValue === undefined) 
-      {
-        break;
-      }
+      if (fieldValue === undefined) break;
 
       fieldValue = fieldValue[fieldName];
-      //if typeof fieldValue === "object" && fieldValue !== null
-      //{
-      //    lobj =  fieldValue
-      //};
     }
 
     return fieldValue;

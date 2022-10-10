@@ -5,12 +5,13 @@
  */
 
 export function uniq(arr = []) {
-  const lSet = new Set(arr);
+  /*const lSet = new Set(arr);
   let lResultArray = [];
 
   for (let key of lSet.keys()) {
     lResultArray.push(key);
   }
 
-  return lResultArray;
+  return lResultArray;*/
+  return [...new Set(arr)]
 }

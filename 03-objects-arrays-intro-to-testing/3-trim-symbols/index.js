@@ -12,7 +12,7 @@ export function trimSymbols(string, size) {
 
   size = (size === undefined) ? string.length : size;
 
-  for (let lChar of string) {
+  for (const lChar of string) {
     lCurrentChar = lCurrentChar ?? lChar;
 
     if (lCurrentChar !== lChar) {
